@@ -1,0 +1,7 @@
+<div id="box-center">
+    <form [formGroup]="loginForm" (ngSubmit)="[showFormValues(),resetFormValues()]">
+        <input id="input-user" class="input" type="text" formControlName="user"/>
+        <input id="input-password" class="input" type="text" formControlName="password" />
+        <button type="submit"  id="button">Entrar</button>
+    </form>
+</div>

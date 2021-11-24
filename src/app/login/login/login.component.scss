@@ -1,0 +1,35 @@
+
+#container-main {
+    position: relative;
+    width: 1440px;
+    height: 1196px;
+}
+
+#container-top {
+    position: absolute;   
+    width: 1440px;
+    height: 809px;
+    left: 0px;
+    top: 0px;
+    background: url(./img/img-login.png) no-repeat bottom center scroll;
+    box-shadow: inset 82px 194px 22px 431px rgba(0, 0, 0, 0.45);
+}
+
+#container-bottom {
+    position: absolute;
+    width: 1440px;
+    height: 387px;
+    left: 0px;
+    top: 809px;
+    background: #000000;
+
+}
+
+#logo-netflix {
+    position: absolute;
+    width: 165px;
+    height: 93px;
+    left: 80px;
+    top: 30px;
+    background: url(./img/logo-netflix.png);
+}
