@@ -22,7 +22,9 @@ h1 {
     flex-wrap: wrap;
 }
 img:hover {
-    fill: rgb(209, 255, 2);
+    box-sizing: border-box;
+    border: 5px solid #FEFEFE;
+    background-color: #FEFEFE;
 }
 figcaption {
     margin: 5px;
@@ -34,5 +36,3 @@ figcaption {
     width: 145px;
     border-radius: 5px;
 }
-
-
