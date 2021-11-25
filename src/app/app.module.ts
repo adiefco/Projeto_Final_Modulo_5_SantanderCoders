@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerComponentComponent } from './banner-component/banner-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+
+    BannerComponentComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     LoginModule,
     ReactiveFormsModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
