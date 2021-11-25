@@ -1,7 +1,29 @@
 <div id="box-center">
-    <form [formGroup]="loginForm" (ngSubmit)="[showFormValues(),resetFormValues()]">
-        <input id="input-user" class="input" type="text" formControlName="user"/>
-        <input id="input-password" class="input" type="text" formControlName="password" />
+    <form [formGroup]="loginForm" (ngSubmit)="[logMeIn(),resetFormValues()]">
+        
+        <div id="div-title">
+            <span id="title">Entrar</span>
+        </div>
+
+        <div id="div-user">
+            <input id="input-user" 
+                class="input" type="text" 
+                formControlName="user"
+                 placeholder="Email ou número de telefone"/>
+            <span class="span-invalid" *ngIf="loginForm.controls.user.errors">
+                Informe um e-mail ou número de telefone válido
+            </span>
+        </div>
+
+        <div id="div-password"> 
+            <input id="input-password" 
+            class="input" type="text" 
+            formControlName="password" 
+            placeholder="Senha"/>
+            <span class="span-invalid" *ngIf="loginForm.controls.password.errors">
+                A senha deve ter entre 4 e 60 caracteres 
+            </span>
+        </div>       
         <button type="submit"  id="button">Entrar</button>
     </form>
 </div>
