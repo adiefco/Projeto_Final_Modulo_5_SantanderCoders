@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -10,7 +10,11 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./center.component.scss']
 })
 export class CenterComponent implements OnInit {
-  loginForm: any = '';
+  loginForm: any;
+  // new FormGroup({
+  //     user: new FormControl(''),
+  //     password: new FormControl('')
+  //   });
   
   constructor(
     private fb: FormBuilder,
@@ -19,10 +23,14 @@ export class CenterComponent implements OnInit {
     private authService: AuthService) { }
 
   ngOnInit(): void {
+    console.log(this.loginForm);
+    console.log(this.loginForm);
     this.loginForm = this.fb.group({
       user: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(60)]]
     })
+    
+    
   }
 
   logMeIn() {
@@ -39,10 +47,11 @@ export class CenterComponent implements OnInit {
 
   logIn(token: string) {
     localStorage.setItem('token', token);
+    this.resetFormValues();
     if (this.authService.intendeduUrl !== '') {
       this.router.navigate([this.authService.intendeduUrl]);
     } else {
-      //this.router.navigate(['/usuarios'])
+      this.router.navigate(['/usuarios'])
     }
   }
 
