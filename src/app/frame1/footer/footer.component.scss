@@ -8,19 +8,15 @@ a{
 a:hover{
     text-decoration: underline;
 }
-
-
 .footer{
     display: flex;
     flex-wrap: wrap;
-    width: 1440px;
     height: 522px;
     background: black;
     color: #6F6F6F;
 }
 
-.duv{
-    width: 1300px;
+#duv{
     height: 47px;
     margin-left: 128px;
     margin-top: 76px;
@@ -31,9 +27,8 @@ a:hover{
 .princ{
     display: flex;
     margin-left: 58px;
-    width: 1244px;
-
 }
+
 #links{
     display: flex;
     flex-wrap: wrap;
@@ -42,9 +37,7 @@ a:hover{
     margin-left: 70px;
 }
 
-
 #flix{
-    width: 1300px;
     height: 45px;
     font-size: 18px;
     margin-top: 45px;
